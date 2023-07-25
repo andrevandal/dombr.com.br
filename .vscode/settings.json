@@ -1,0 +1,25 @@
+{
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "astro", // Enable .astro
+    "typescript", // Enable .ts
+    "typescriptreact" // Enable .tsx
+  ],
+
+  "stylelint.validate": [
+    // ↓ Add "html" language.
+    "html",
+    // ↓ Add "vue" language.
+    "vue",
+    // ↓ Add "svelte" language.
+    "svelte",
+    // ↓ Add "astro" language.
+    "astro"
+  ],
+  "figma.autocompleteBlocks": true,
+  "prettier.documentSelectors": ["**/*.astro"],
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

@@ -1,0 +1,41 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Section from "@components/Section.astro";
+import Button from "@components/Button.astro";
+import Navbar from "@components/Navbar.astro";
+import { Sprite } from "astro-icon";
+---
+
+<Sprite.Provider>
+  <Layout title="Dom Agência">
+    <Navbar />
+    <main class="pt-[74px] bg-purple-500">
+			<Section as="header" class=" justify-center">
+				<h1 class="order-1 lg:col-start-1 text-gray-50
+        text-3xl lg:text-5xl
+        font-bold
+        leading-10 text-center lg:text-left">Transforme visitantes em clientes!</h1>
+				<p class="order-2 lg:col-start-1 text-purple-50  text-center  lg:text-left">Domine seu mercado com a força da <strong>Landing Page de alta conversão</strong>.</p>
+				<Button variant="secondary" class="order-4 lg:order-3 lg:col-start-1 self-center lg:self-start max-w-fit">
+					<span> Estou Interessado!</span>
+					<Sprite name="ic:baseline-whatsapp" class="w-5 h-5" />
+				</Button>
+				<div slot="extra" class="w-full h-full bg-white/20 rounded-lg order-3 lg:order-4 lg:col-start-2 lg:row-start-1 lg:row-end-4 aspect-video my-6 lg:my-0"></div>
+			</Section>
+      <!-- <Button>
+        <span> Estou Interessado!</span>
+        <Sprite name="ic:baseline-whatsapp" class="w-5 h-5" />
+      </Button>
+      <Button variant="secondary">
+        <span> Estou Interessado!</span>
+        <Sprite name="ic:baseline-whatsapp" class="w-5 h-5" />
+      </Button>
+      <Button variant="secondary" outlined>
+        <span> Fale conosco!</span>
+        <Sprite name="ic:baseline-whatsapp" class="w-5 h-5" />
+      </Button> -->
+    </main>
+  </Layout>
+</Sprite.Provider>
+
+<style></style>

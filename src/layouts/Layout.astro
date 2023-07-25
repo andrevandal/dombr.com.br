@@ -1,0 +1,37 @@
+---
+interface Props {
+  title: string;
+}
+
+import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <GoogleFontsOptimizer
+      url="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700&display=swap"
+    />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body><style is:global>
+    html {
+      font-family: Poppins, system-ui, sans-serif;
+      height: 100%;
+    }
+    body {
+      height: 100%;
+    }
+  </style>
+</html>

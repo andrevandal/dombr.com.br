@@ -1,0 +1,43 @@
+{
+  "name": "@andrevandal/dombr.com.br",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && tsc --noEmit && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "prettier": "prettier --check \"**/*.{css,html,astro,json}\"",
+    "prettier:w": "prettier --write \"**/*.{css,html,astro,json}\"",
+    "stylelint": "stylelint --fix --allow-empty-input --config .stylelintrc.cjs --ignore-path .gitignore '**/*.{css,html,astro,json}'",
+    "eslint": "eslint \"src/**/*.{ts,js,astro}\"",
+    "eslint:f": "eslint --fix \"src/**/*.{ts,js,astro}\" "
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^6.6.1",
+    "@astrojs/sitemap": "^1.4.0",
+    "@astrojs/tailwind": "^4.0.0",
+    "astro": "^2.8.3",
+    "astro-compress": "^1.1.49",
+    "astro-critters": "^1.1.39",
+    "astro-google-fonts-optimizer": "^0.2.2",
+    "astro-icon": "^0.8.1",
+    "astro-navbar": "^2.0.0",
+    "tailwindcss": "^3.0.24"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.45.0",
+    "eslint-plugin-astro": "^0.27.2",
+    "postcss-html": "^1.5.0",
+    "postcss-import": "^15.1.0",
+    "postcss-nested": "^6.0.1",
+    "postcss-preset-env": "^9.0.0",
+    "prettier": "^3.0.0",
+    "prettier-plugin-astro": "^0.11.0",
+    "stylelint-config-html": "^1.1.0",
+    "typescript": "^5.1.6"
+  }
+}

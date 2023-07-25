@@ -1,0 +1,43 @@
+---
+interface Props {
+  variant?: string;
+  href?: string;
+  class?: string;
+  outlined?: boolean
+}
+
+const { variant = 'primary', href, outlined = false } = Astro.props;
+
+const classNames = [
+  'btn',
+  {
+    'primary': variant === 'primary',
+    'secondary': variant === 'secondary',
+    'outlined': outlined,
+  },
+  Astro.props.class
+]
+---
+
+<a href={href || "#"} class:list={[classNames]}>
+  <slot />
+</a>
+
+<style scoped>
+  .btn {
+    @apply inline-flex py-3 px-6 justify-center items-center gap-2 rounded-lg  text-base text-center font-medium tracking-tight transition-all duration-200 ease-in-out;
+    @apply text-white bg-gray-600 hover:bg-gray-500 ring-4 ring-transparent focus:ring-gray-500/50;
+
+    &.primary {
+      @apply text-white bg-purple-600 hover:bg-purple-500 ring-4 ring-transparent focus:ring-purple-800/50 focus:bg-purple-500;
+    }
+    &.secondary {
+      @apply text-purple-700 bg-yellow-300 hover:bg-yellow-200 ring-4 ring-transparent focus:ring-yellow-200/50 focus:bg-yellow-200;
+      &.outlined {
+        @apply bg-transparent box-border border border-yellow-300 hover:bg-yellow-300  text-yellow-300 hover:text-purple-700 focus:text-purple-700 focus:bg-yellow-300 focus:ring-yellow-300/50 focus:ring-4;
+      }
+
+    }
+    
+  }
+</style>
