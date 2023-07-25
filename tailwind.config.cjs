@@ -44,6 +44,9 @@ module.exports = {
           DEFAULT: "#79767D",
         },
       },
+      backgroundImage: {
+        'noise': "url('/images/noise.png')",
+      }
     },
   },
   plugins: [],
