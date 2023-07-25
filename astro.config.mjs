@@ -9,5 +9,18 @@ import compress from "astro-compress";
 export default defineConfig({
   output: "server",
   adapter: cloudflare(),
-  integrations: [sitemap(), tailwind(), critters(), compress()],
+  integrations: [
+      sitemap(), 
+      tailwind(), 
+      critters(),
+      compress()
+    ],
+    // https://github.com/natemoo-re/astro-icon/issues/35
+    vite: {
+      resolve: {
+        alias: {
+          "svgo": import.meta.env.PROD ? "svgo/dist/svgo.browser.js" : "svgo"
+        }
+      }
+    }
 });
