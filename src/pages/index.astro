@@ -10,31 +10,30 @@ import { Sprite } from "astro-icon";
   <Layout title="Dom Agência">
     <Navbar />
     <main class="">
-      <Section as="header" class="justify-center" upperClass="">
+      <Section as="header" noised variant="purple" class="lg:grid lg:gap-x-6 gap-y-2 lg:gap-y-4 lg:grid-cols-2  lg:py-32  lg:grid-rows-[repeat(3,_minmax(min-content,_max-content))_1fr]">
         <h1
-          class="order-1 lg:col-start-1 text-gray-50 text-3xl lg:text-5xl font-bold leading-10 text-center lg:text-left"
+          class="lg:col-start-1 text-gray-50 text-3xl lg:text-5xl font-bold leading-10 text-center lg:text-left "
         >
           Transforme visitantes em clientes!
         </h1>
         <p
-          class="order-2 lg:col-start-1 text-purple-50 text-center lg:text-left"
+          class="lg:col-start-1 text-purple-50 text-center lg:text-left lg:max-w-[40ch]"
         >
           Domine seu mercado com a força da <strong
             >Landing Page de alta conversão</strong
           >.
         </p>
+        <div
+          class="w-full bg-white/20 rounded-lg lg:col-start-2 lg:row-start-1 aspect-video my-6 lg:my-0 lg:row-end-5"
+        >
+        </div>
         <Button
           variant="secondary"
-          class="order-4 lg:order-3 lg:col-start-1 self-center lg:self-start max-w-fit"
+          class="lg:col-start-1 self-center lg:self-start max-w-fit"
         >
           <span> Estou Interessado!</span>
           <Sprite name="ic:baseline-whatsapp" class="w-5 h-5" />
         </Button>
-        <div
-          slot="extra"
-          class="w-full h-full bg-white/20 rounded-lg order-3 lg:order-4 lg:col-start-2 lg:row-start-1 lg:row-end-4 aspect-video my-6 lg:my-0"
-        >
-        </div>
       </Section>
       <!-- <Button>
         <span> Estou Interessado!</span>
