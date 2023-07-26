@@ -2,16 +2,17 @@
 const { as = "div", class: className, noised = false, variant = 'transparent' } = Astro.props;
 const SectionTag = as;
 const hasExtraSlot = Astro.slots.has("extra");
+const hasWaveSlot = Astro.slots.has("wave");
 
 const upperClass = [{
-  "bg-purple-500": variant === 'purple',
+  "bg-purple-800": variant === 'purple',
   "bg-transparent": variant === 'transparent',
   "bg-white": variant === 'white',
   "before:bg-noise before:bg-[length:50%] before:bg-repeat before:opacity-[0.04] relative before:content-[\'_\'] before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:mix-blend-multiply": noised
 }]
 
 const classList = [
-  "container relative mx-auto p-4 flex flex-col justify-center pt-12 pb-16",
+  "container relative mx-auto p-4 flex flex-col justify-center",
   { extra: hasExtraSlot },
   className,
 ];
@@ -21,4 +22,5 @@ const classList = [
     <slot />
     <slot name="extra" />
   </div>
+  <slot name="wave" />
 </SectionTag>

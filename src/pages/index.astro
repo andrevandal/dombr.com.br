@@ -10,7 +10,7 @@ import { Sprite } from "astro-icon";
   <Layout title="Dom Agência">
     <Navbar />
     <main class="">
-      <Section as="header" noised variant="purple" class="lg:grid lg:gap-x-6 gap-y-2 lg:gap-y-4 lg:grid-cols-2  lg:py-32  lg:grid-rows-[repeat(3,_minmax(min-content,_max-content))_1fr]">
+      <Section as="header" noised variant="purple" class="pt-12 pb-[calc(4rem_+_50px)] lg:grid lg:gap-x-6 gap-y-2 lg:gap-y-4 lg:grid-cols-2  lg:pt-32 lg:pb-[calc(8rem_+_100px)]  lg:grid-rows-[repeat(3,_minmax(min-content,_max-content))_1fr]">
         <h1
           class="lg:col-start-1 text-gray-50 text-3xl lg:text-5xl font-bold leading-10 text-center lg:text-left "
         >
@@ -34,21 +34,12 @@ import { Sprite } from "astro-icon";
           <span> Estou Interessado!</span>
           <Sprite name="ic:baseline-whatsapp" class="w-5 h-5" />
         </Button>
+        <div class=" absolute bottom-0 left-0 w-full overflow-hidden leading-[0] rotate-180" slot="wave">
+          <svg xmlns="http://www.w3.org/2000/svg" class=" relative block w-[calc(200%_+_1.3px)] h-[50px] lg:w-[calc(150%_+_1.3px)] lg:h-[100px] text-white" viewBox="0 0 1200 120" preserveAspectRatio="none">
+              <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="currentColor"></path>
+          </svg>
+        </div>
       </Section>
-      <!-- <Button>
-        <span> Estou Interessado!</span>
-        <Sprite name="ic:baseline-whatsapp" class="w-5 h-5" />
-      </Button>
-      <Button variant="secondary">
-        <span> Estou Interessado!</span>
-        <Sprite name="ic:baseline-whatsapp" class="w-5 h-5" />
-      </Button>
-      <Button variant="secondary" outlined>
-        <span> Fale conosco!</span>
-        <Sprite name="ic:baseline-whatsapp" class="w-5 h-5" />
-      </Button> -->
     </main>
   </Layout>
 </Sprite.Provider>
-
-<style></style>

@@ -45,8 +45,8 @@ module.exports = {
         },
       },
       backgroundImage: {
-        'noise': "url('/images/noise.png')",
-      }
+        noise: "url('/images/noise.png')",
+      },
     },
   },
   plugins: [],
